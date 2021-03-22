@@ -24,7 +24,7 @@
  
                     <div id="short_url_container" class="flex py-5" style="display: none;">
  
-                        <input id="short_url" type="text" placeholder="" class="w-full px-4 py-3 rounded" onclick="shorter.copy_url">
+                        <input id="short_url" type="text" placeholder="" class="w-full px-4 py-3 rounded" onclick="shorter.copy_url()">
  
                     </div>
 

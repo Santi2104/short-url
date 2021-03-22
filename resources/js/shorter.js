@@ -4,18 +4,25 @@ window.shorter = {
 
         if (shorter.validate_url(long_url)) {
             
-            axios.post('/url',{
+            axios.post('/url', {
+ 
                 long_url: long_url
-            }).then(function (response){
-                document.getElementById('long_url').value = '';
-
-                document.getElementById('short_url_container').style.display = "block";
-
-                document.getElementById('short_url').value = response.data.short_url;
-
-            }).catch(function (error){
-                console.log(error);
+     
             })
+            .then(function (response) {
+                
+                document.getElementById('long_url').value = '';
+     
+                document.getElementById('short_url_container').style.display = "block";
+     
+                document.getElementById('short_url').value = response.data.short_url;
+     
+            })
+            .catch(function (error) {
+                
+                console.log(error);
+     
+            });
 
         }
     },
@@ -36,7 +43,7 @@ window.shorter = {
             alert('Debe colocar una Url');
         }
 
-        if (!validate_url.isWebUri(url)) {
+        if (!validUrl.isWebUri(url)) {
             status = false;
             alert('URL no valida');
         }

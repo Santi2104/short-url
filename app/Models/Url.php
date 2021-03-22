@@ -12,7 +12,7 @@ class Url extends Model
 
     protected $fillable = ['url', 'user_id'];
 
-    public $timestamp = false;
+    public $timestamps = false;
 
     /**
      * Get the user that owns the Url

@@ -38,7 +38,7 @@ class UrlController extends Controller
         $code = $url->short_url($request->long_url);
 
         return response()->json([
-            'short_url' => url('/'). '/' . $code
+            'short_url' => url('/') . '/' . $code
         ]);
     }
 
