@@ -33,9 +33,13 @@ class UrlController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Url $url)
     {
-        //
+        $code = $url->short_url($request->long_url);
+
+        return response()->json([
+            'short_url' => url('/'). '/' . $code
+        ]);
     }
 
     /**
